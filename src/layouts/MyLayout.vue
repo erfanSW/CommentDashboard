@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="bg-purple-10">
         <q-btn
           flat
           dense
@@ -11,29 +11,23 @@
           aria-label="Menu"
         />
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title>عرفان چگینی</q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
-      bordered
-      content-class="bg-grey-2"
+      :mini="miniState"
+      @mouseover="miniState = false"
+      @mouseout="miniState = true"
+      :width="200"
+      :breakpoint="500"
     >
-      <q-list>
-        <q-item-label header>Essential Links</q-item-label>
+      <q-list class="mydrawer">
         <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
           <q-item-section avatar>
             <q-icon name="school" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Docs</q-item-label>
-            <q-item-label caption>quasar.dev</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://github.quasar.dev">
@@ -92,12 +86,21 @@
 
 <script>
 export default {
-  name: 'MyLayout',
+  name: "MyLayout",
 
-  data () {
+  data() {
     return {
-      leftDrawerOpen: false
-    }
+      leftDrawerOpen: false,
+      miniState: true
+    };
   }
-}
+};
 </script>
+
+<style scoped>
+.mydrawer {
+  color: white !important;
+  background-color: #4a148c !important;
+  /* background-image: linear-gradient(to left , #20002c , #cbb4d4) */
+}
+</style>

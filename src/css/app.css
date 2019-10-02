@@ -1,1 +1,8 @@
-/* app global css */
+@font-face {
+    font-family: IranSans;
+    src: url('./fonts/IRANSansWeb(FaNum).woff')
+}
+
+* {
+    font-family: 'IranSans'
+}
