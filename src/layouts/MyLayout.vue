@@ -99,7 +99,9 @@ export default {
       leftDrawerOpen: false,
       miniState: true
     };
-  }
+  }, mounted() {
+
+}
 };
 </script>
 
