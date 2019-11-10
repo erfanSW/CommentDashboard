@@ -10,7 +10,7 @@
       <br />
       <br />
       <div>
-        <p class="script" id="script">fuck off</p>
+        <p class="script" id="script">hello</p>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ h6 {
   text-align: left;
   color: white;
   float: right;
-  background-color: #151718;
+  background-color: #151718f5;
   width: 1200px;
   height: 300px;
   border-radius: 10px;
@@ -78,5 +78,10 @@ h6 {
   box-shadow: 0px 0px 2px 2px grey;
   color: white;
   background-color: white;
+}
+@media  only screen and (max-width:1200px) {
+    .container {
+    width: 90%;
+    }
 }
 </style>

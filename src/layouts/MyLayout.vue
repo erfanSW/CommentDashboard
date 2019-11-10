@@ -99,9 +99,13 @@ export default {
       leftDrawerOpen: false,
       miniState: true
     };
-  }, mounted() {
-
-}
+  },
+  mounted() {
+    console.log(this.$store.state.isUserLoggedIn);
+    if (!this.$store.state.isUserLoggedIn) {
+      this.$router.push("/login");
+    }
+  }
 };
 </script>
 
@@ -109,6 +113,5 @@ export default {
 .mydrawer {
   color: white !important;
   background-color: #4a148c !important;
-  /* background-image: linear-gradient(to left , #20002c , #cbb4d4) */
 }
 </style>
